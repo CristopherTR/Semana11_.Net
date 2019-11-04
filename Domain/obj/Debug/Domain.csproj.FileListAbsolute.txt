@@ -1,0 +1,11 @@
+C:\Users\Alumno\source\repos\MVCAJAX\Domain\bin\Debug\Domain.dll
+C:\Users\Alumno\source\repos\MVCAJAX\Domain\bin\Debug\Domain.pdb
+C:\Users\Alumno\source\repos\MVCAJAX\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\Alumno\source\repos\MVCAJAX\Domain\obj\Debug\Domain.dll
+C:\Users\Alumno\source\repos\MVCAJAX\Domain\obj\Debug\Domain.pdb
+C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\bin\Debug\Domain.dll
+C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\bin\Debug\Domain.pdb
+C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\obj\Debug\Domain.dll
+C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\obj\Debug\Domain.pdb
