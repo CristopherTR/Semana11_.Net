@@ -12,14 +12,24 @@
             <h3 class="panel-title">Please enter the details below.</h3>
         </div>
         <div class="panel-body">
-            <div class="form-control col-md-5">
+            <div class="form-group col-md-5">
                 <label>Student Name</label>
                 <input type="text" name="StudentName" id="StudentName" class="form-control" placeholder="Enter Student Name" required="" />
             </div>
 
             <div class="form-group col-md-5">
                 <label>Student Address</label>
-                <input type="text" name="StudentAddress" id="StudentAddress" class="from-control" placeholder="Enter Student Address" required="" />
+                <input type="text" name="StudentAddress" id="StudentAddress" class="form-control" placeholder="Enter Student Address" required="" />
+            </div>
+
+            <div class="form-group col-md-5">
+                <label>Student Last Name</label>
+                <input type="text" name="StudentLast" id="StudentLast" class="form-control" placeholder="Enter Student LastName" required="" />
+            </div>
+
+            <div class="form-group col-md-5">
+                <label>Student Code</label>
+                <input type="text" name="StudentCode" id="StudentCode" class="form-control" placeholder="Enter Student Code" required="" />
             </div>
 
             <div class="form-group col-md-1">
@@ -35,11 +45,13 @@
     <thead>
         @foreach (var item in Model)
         {
-            <tr>
-                <th align="left" class="productth">@item.ID</th>
-                <th align="left" class="productth">@item.Name</th>
-                <th align="left" class="productth">@item.Address</th>
-            </tr>
+        <tr>
+            <th align="left" class="productth">@item.ID</th>
+            <th align="left" class="productth">@item.Name</th>
+            <th align="left" class="productth">@item.Address</th>
+            <th align="left" class="productth">@item.LastName</th>
+            <th align="left" class="productth">@item.Code</th>
+        </tr>
         }
     </thead>
     <tbody></tbody>
@@ -52,17 +64,19 @@
         $(function () {
            // LoadData();
 
-            $("#btnSave").Click(function () {
+            $("#btnSave").click(function () {
                 //alert("")
                 var std = {};
                 std.studentName = $("#StudentName").val();
                 std.studentAddress = $("#StudentAddress").val();
+                std.studentLast = $("#StudentLast").val();
+                std.studentCode = $("#StudentCode").val();
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("createStudent")',
-                    data: '{std' + JSON.stringify(std) + '}',
+                    url: '@Url.Action("CreateStudent")',
+                    data: '{std: ' + JSON.stringify(std) + '}',
                     dataType: "json",
-                    contentType: "application/json: charset=utf-8",
+                    contentType: "application/json; charset=utf-8",
                     success: function () {
                         //alert("Data has been added successfully.");
                         LoadData();
@@ -79,16 +93,18 @@
             $("tblStudent tbody tr").remove();
             $.ajax({
                 type: "POST",
-                url: '@Url.Action("getStudent")',
-                dataType: json,
+                url: '@Url.Action("GetStudent")',
+                dataType: 'json',
                 data: { id: '' },
                 success: function (data) {
                     var items = "";
                     $.each(data, function (i, item) {
-                        var items = '';
+                        var rows = "<tr>";
                         + "<td class='prtoducttd'>" + item.studentID + "</td>"
                             + "<td class='prtoducttd'>" + item.studentName + "</td>"
                             + "<td class='prtoducttd'>" + item.studentAddress + "</td>"
+                            + "<td class='prtoducttd'>" + item.studentLast + "</td>"
+                            + "<td class='prtoducttd'>" + item.studentCode + "</td>"
                             + "</tr>";
                         $('#tblStudent tbody').append(rows);
                     });
@@ -100,6 +116,7 @@
                     alert("ExceptionType: " + r.ExceptionType);
                 }
             });
+            return false;
         }
     </script>
 }

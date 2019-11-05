@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Infraestructure;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using Domain;
 
 
@@ -34,11 +36,28 @@ namespace Service
         {
             using (var context = new SchoolContext())
             {
-                context.Students.Add(student);
-                context.SaveChanges();
+                //context.Students.Add(student);
+                //context.SaveChanges();
+                try
+                {
+                    context.Students.Add(student);
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException dbEx)
+                {
+                    foreach (var validationErrors in dbEx.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            Trace.TraceInformation("Property: {0} Error: {1}",
+                                validationError.PropertyName,
+                                validationError.ErrorMessage);
+                        }
+                    }
+                }
             }
         }
-            public void Update(Student student, int ID)
+        public void Update(Student student, int ID)
             {
                 using (var context = new SchoolContext())
             {
@@ -46,6 +65,8 @@ namespace Service
 
                 studentNew.studentName = student.studentName;
                 studentNew.studentAddress = student.studentAddress;
+                studentNew.studentLast = student.studentLast;
+                studentNew.studentCode = student.studentCode;
 
                 context.SaveChanges();
             }

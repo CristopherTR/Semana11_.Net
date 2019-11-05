@@ -21,7 +21,9 @@ namespace MVCAJAX.Controllers
                          {
                              ID = c.studentID,
                              Address = c.studentAddress,
-                             Name = c.studentName
+                             Name = c.studentName,
+                             LastName = c.studentLast,
+                             Code = c.studentCode
                          }).ToList();
 
             return View(model);
@@ -32,17 +34,39 @@ namespace MVCAJAX.Controllers
             return View();
         }
 
-        public JsonResult getStudent(string id)
+        public JsonResult GetStudent(string id)
         {
             return Json(service.Get(), JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public ActionResult createStudent(Student std)
+        public ActionResult CreateStudent(Student std)
         {
             service.Insert(std);
             string message = "SUCCESS";
             return Json(new { Message = message, JsonRequestBehavior.AllowGet });
         }
+
+        [HttpPost]
+        public ActionResult UpdateStudent(Student std, int Id)
+        {
+            std.FechaModificacion = DateTime.Today;
+            service.Update(std, Id);
+            string message = "SUCCESS";
+
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
+
+        }
+
+        [HttpPost]
+        public ActionResult DeleteStudent(int Id)
+        {
+            service.Delete(Id);
+            string message = "SUCCESS";
+
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
+
+        }
+
     }
 }

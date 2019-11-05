@@ -49,24 +49,28 @@
         </thead>
         <tbody></tbody>
     </table>
-
+</div>
 @section Scripts
 {
     <script type="text/javascript">
-        $(function () {
-            LoadData();
 
-            $("#btnSave").Click(function () {
-                //alert("")
+        $(function () {
+            
+            LoadData();
+            
+            $("#btnSave").click(function () {
+                //alert("jhjghfjgghfjgh")
                 var std = {};
                 std.studentName = $("#StudentName").val();
                 std.studentAddress = $("#StudentAddress").val();
+                std.studentLast = $("#StudentLast").val();
+                std.studentCode = $("#StudentCode").val();
                 $.ajax({
                     type: "POST",
-                    url: '@Url.Action("createStudent")',
-                    data: '{std' + JSON.stringify(std) + '}',
+                    url: '@Url.Action("CreateStudent")',
+                    data: '{std: ' + JSON.stringify(std) + '}',
                     dataType: "json",
-                    contentType: "application/json: charset=utf-8",
+                    contentType: "application/json; charset=utf-8",
                     success: function () {
                         //alert("Data has been added successfully.");
                         LoadData();
@@ -80,30 +84,39 @@
         });
 
         function LoadData() {
+            //alert('LoadData');
             $("tblStudent tbody tr").remove();
+            
             $.ajax({
                 type: "POST",
-                url: '@Url.Action("getStudent")',
-                dataType: json,
+                url: '@Url.Action("GetStudent")',
+                dataType: 'json',
                 data: { id: '' },
                 success: function (data) {
-                    var items = "";
+                    var items = '';
+                    //alert('murio1');
                     $.each(data, function (i, item) {
-                        var items = '';
+                        var rows = "<tr>";
                         + "<td class='prtoducttd'>" + item.studentID + "</td>"
-                            + "<td class='prtoducttd'>" + item.studentName + "</td>"
-                            + "<td class='prtoducttd'>" + item.studentAddress + "</td>"
-                            + "</tr>";
+                        + "<td class='prtoducttd'>" + item.studentName + "</td>"
+                        + "<td class='prtoducttd'>" + item.studentAddress + "</td>"
+                        + "<td class='prtoducttd'>" + item.studentLast + "</td>"
+                        + "<td class='prtoducttd'>" + item.studentCode + "</td>"
+                        + "</tr>";
                         $('#tblStudent tbody').append(rows);
+                        //alert('murio2');
                     });
                 },
+                
                 error: function (ex) {
                     var r = jQuery.parseJSON(response.responseText);
                     alert("Message: " + r.Message);
                     alert("StackTrace: " + r.StackTrace);
                     alert("ExceptionType: " + r.ExceptionType);
+                    //alert('murio3');
                 }
             });
+            return false;
         }
     </script>
 }
