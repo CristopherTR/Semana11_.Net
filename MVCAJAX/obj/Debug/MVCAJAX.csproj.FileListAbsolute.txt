@@ -237,13 +237,11 @@ C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\roslyn\vbc.rsp
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\roslyn\VBCSCompiler.exe
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Antlr3.Runtime.dll
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Domain.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\EntityFramework.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\EntityFramework.SqlServer.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Newtonsoft.Json.dll
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Service.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.Helpers.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.Mvc.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.Optimization.dll
@@ -252,10 +250,6 @@ C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.WebPages.Deployment
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.WebPages.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.WebPages.Razor.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\WebGrease.dll
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Infraestructure.dll
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Domain.pdb
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Service.pdb
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Service.dll.config
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\EntityFramework.xml
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\EntityFramework.SqlServer.xml
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.Helpers.xml
@@ -268,8 +262,6 @@ C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\System.Web.WebPages.Razor.xml
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Newtonsoft.Json.xml
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Antlr3.Runtime.pdb
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Infraestructure.pdb
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Infraestructure.dll.config
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\es\System.Web.Mvc.resources.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\es\System.Web.Optimization.resources.dll
@@ -281,4 +273,3 @@ C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\obj\Debug\MVCAJAX.csprojAssemblyRe
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\obj\Debug\MVCAJAX.csproj.CopyComplete
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\obj\Debug\MVCAJAX.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\obj\Debug\MVCAJAX.pdb
-C:\Users\Alumno\Desktop\Semana11_.Net\MVCAJAX\bin\Domain.dll.config

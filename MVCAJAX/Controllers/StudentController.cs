@@ -3,30 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Domain;
-using Service;
 using MVCAJAX.Models;
+using System.Threading.Tasks;
 
 namespace MVCAJAX.Controllers
 {
     public class StudentController : Controller
     {
-        private StudentService service = new StudentService();
+        Proxy.StudentProxy proxy = new Proxy.StudentProxy();
 
-        //GET: Student
         public ActionResult IndexRazor()
         {
-            var model = (from c in service.Get()
-                         select new StudentModel
-                         {
-                             ID = c.studentID,
-                             Address = c.studentAddress,
-                             Name = c.studentName,
-                             LastName = c.studentLast,
-                             Code = c.studentCode
-                         }).ToList();
+            var response = Task.Run(() => proxy.GetStudentsAsync());
+            return View(response.Result.listado);
+        }
 
-            return View(model);
+        public JsonResult GetStudent(string id)
+        {
+            var response = Task.Run(() => proxy.GetStudentsAsync());
+            return Json(response.Result.listado, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public ActionResult CreateStudent(StudentModel std)
+        {
+            //   service.Insert(std);
+            var response = Task.Run(() => proxy.InsertAsync(std));
+            string message = response.Result.Mensaje;
+            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
         }
 
         public ActionResult Index()
@@ -34,20 +38,7 @@ namespace MVCAJAX.Controllers
             return View();
         }
 
-        public JsonResult GetStudent(string id)
-        {
-            return Json(service.Get(), JsonRequestBehavior.AllowGet);
-        }
-
-        [HttpPost]
-        public ActionResult CreateStudent(Student std)
-        {
-            service.Insert(std);
-            string message = "SUCCESS";
-            return Json(new { Message = message, JsonRequestBehavior.AllowGet });
-        }
-
-        [HttpPost]
+        /*[HttpPost]
         public ActionResult UpdateStudent(Student std, int Id)
         {
             std.FechaModificacion = DateTime.Today;
@@ -66,7 +57,7 @@ namespace MVCAJAX.Controllers
 
             return Json(new { Message = message, JsonRequestBehavior.AllowGet });
 
-        }
+        }*/
 
     }
 }

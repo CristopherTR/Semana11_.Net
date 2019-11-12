@@ -43,18 +43,20 @@
 
 <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">
     <thead>
+        
+    </thead>
+    <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <th align="left" class="productth">@item.ID</th>
-            <th align="left" class="productth">@item.Name</th>
-            <th align="left" class="productth">@item.Address</th>
-            <th align="left" class="productth">@item.LastName</th>
-            <th align="left" class="productth">@item.Code</th>
-        </tr>
+            <tr>
+                <th align="left" class="productth">@item.studentID</th>
+                <th align="left" class="productth">@item.studentName</th>
+                <th align="left" class="productth">@item.studentAddress</th>
+                <th align="left" class="productth">@item.studentLastName</th>
+                <th align="left" class="productth">@item.studentCode</th>
+            </tr>
         }
-    </thead>
-    <tbody></tbody>
+    </tbody>
 </table>
 
 

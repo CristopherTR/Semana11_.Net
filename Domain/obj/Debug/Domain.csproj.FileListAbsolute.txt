@@ -11,7 +11,6 @@ C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\obj\Debug\Domain.dll
 C:\Users\CRISTOPHER\Desktop\MVCAJAX\Domain\obj\Debug\Domain.pdb
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\bin\Debug\Domain.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\bin\Debug\Domain.pdb
-C:\Users\Alumno\Desktop\Semana11_.Net\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\obj\Debug\Domain.dll
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\obj\Debug\Domain.pdb
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\bin\Debug\Domain.dll.config
@@ -20,3 +19,4 @@ C:\Users\Alumno\Desktop\Semana11_.Net\Domain\bin\Debug\EntityFramework.SqlServer
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\bin\Debug\EntityFramework.xml
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alumno\Desktop\Semana11_.Net\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\Alumno\Desktop\Semana11_.Net\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
